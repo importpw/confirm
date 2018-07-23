@@ -5,3 +5,9 @@ confirm() {
   prompt yn "$1"
   [ "$yn" = "y" ] || [ "$yn" = "yes" ]
 }
+
+confirm_exec() {
+  local message="$1"
+  shift
+  confirm "${message//\$\*/$*}" && "$@"
+}

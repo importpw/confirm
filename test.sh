@@ -10,3 +10,6 @@ if confirm "Do you like bash?"; then
 else
   echo "Boo..."
 fi
+
+
+confirm_exec 'Run command? $* [yn]' echo foo
