@@ -1,7 +1,6 @@
 #!/bin/sh
 set -eu
-test -f "$HOME/.import.sh" || curl -sfS https://import.pw > "$HOME/.import.sh"
-source "$HOME/.import.sh"
+eval "$(curl -sfLS https://import.pw)"
 
 source "./confirm.sh"
 
